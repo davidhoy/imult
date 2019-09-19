@@ -122,12 +122,11 @@ void timed_test_run(imult_func func, int a, int b, int iterations) {
  * Out: irrelevant
  ***************************************************************/
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    
     int a = 23;
     int b = 435;
     int iterations = 10000;
     
+    // Run timed tests on various implementations
     timed_test_run(imult0, a, b, iterations);       // Very fast, using C operator.
     timed_test_run(imult1, a, b, iterations);       // Slow, using simple loop.
     timed_test_run(imult2, a, b, iterations);       // Faster, depending on difference between a & b.
